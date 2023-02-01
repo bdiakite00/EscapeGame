@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+    
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/signin/">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+{% endblock %}
+
+{% block body %}
+    <h1> Authentification </h1>
+
+    <div class="container">
+        <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+            <div class="card-header">Inscription</div>
+            <div class="card-body">
+                <form class="form-signin">
+                    {{ form_start (form) }}
+
+                    {{ form_row (form.groupenumber, {'label': 'Numero de groupe', 'attr':
+                        {'placeholder': 'Numero de groupe' } } ) }}
+                    {{ form_row (form.email, {'label': 'Adresse email', 'attr':
+                        {'placeholder': 'Adresse email' } } ) }}
+
+                    {{ form_row (form.password, {'label': 'Mot de passe', 'attr':
+                        {'placeholder': 'Mot de passe' } } ) }}
+
+                    {{ form_row (form.confirm_password, {'label': 'Confirmez votre mot de passe', 'attr':
+                        {'placeholder': 'Repétez votre mot de passe' } } ) }}
+
+                    <a href="#" class="card-link">s'inscrire</a>
+                    <a href="#" class="card-link">se connecter</a>
+
+                    {{ form_end (form) }}
+                </form>
+            </div>
+            </div>
+    </div>
+
+
+
+{% endblock %}
