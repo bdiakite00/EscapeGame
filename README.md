@@ -1,1 +1,1 @@
-# MiniProjetMercredi
+# Projet SeriousGame
